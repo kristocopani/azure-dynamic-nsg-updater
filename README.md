@@ -8,8 +8,6 @@ Docker image used to dynamically update the IP of a Network Security Group rule 
 - Update one ip rule on the specified network security group.
 - Customize the time intervals
 
----
-
 ## Under the hood
 
 ### Container
@@ -26,7 +24,6 @@ The scripts does two things as of now:
 2. Compares it to the rule on your Azure Network Security Group
 3. If the current external IP is different than the defined IP of the rule, it updates it 
 
----
 ## Azure
 
 1. [Create a new Enterprise Application in your Azure AD Tenant](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal) 
