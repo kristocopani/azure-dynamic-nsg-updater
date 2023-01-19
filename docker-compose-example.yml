@@ -1,0 +1,19 @@
+version: '3'
+services:
+  nsgupdate:
+    build: .
+    container_name: XXXXXXXXXXXX
+    environment:
+      - CRON_SCHEDULE=XXXXXXXXXXXX
+      - TENANT_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+      - CERTIFICATE_PWD=XXXXXXXX
+      - APPLICATION_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+      - SUBSCRIPTION_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+      - NSG_NAME=XXXX
+      - RULE_NAME=XXXX
+      - TZ=XXXXXXXXXXXX
+    volumes:
+      - ${PWD}/scripts/:/app
+    restart: unless-stopped
+
+
