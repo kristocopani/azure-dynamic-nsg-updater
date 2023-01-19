@@ -9,6 +9,7 @@ Docker image used to dynamically update the IP of a Network Security Group rule 
 - Customize the time intervals
 
 ---
+
 ## Under the hood
 
 ### Container
