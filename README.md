@@ -37,7 +37,7 @@ The scripts does two things as of now:
 1. Start by downloading the repo
 
 ```
-git clone https://github.com/libgit2/libgit2
+git clone https://github.com/kristocopani/azure-dynamic-nsg-updater
 cd dynamic-nsg-updater
 ```
 
