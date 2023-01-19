@@ -7,6 +7,7 @@ Docker image used to dynamically update the IP of a Network Security Group rule 
 ## Features
 - Update one ip rule on the specified network security group.
 - Customize the time intervals
+
 ---
 ## Under the hood
 
