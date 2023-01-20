@@ -2,18 +2,18 @@ version: '3'
 services:
   nsgupdate:
     build: .
-    container_name: XXXXXXXXXXXX
+    container_name: XXXXXXXXXXXX                              #REQUIRED
     environment:
-      - CRON_SCHEDULE=XXXXXXXXXXXX
-      - TENANT_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-      - CERTIFICATE_PWD=XXXXXXXX
-      - APPLICATION_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-      - SUBSCRIPTION_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-      - NSG_NAME=XXXX
-      - RULE_NAME=XXXX
-      - TZ=XXXXXXXXXXXX
+      - CRON_SCHEDULE=XXXXXXXXXXXX                            #REQUIRED
+      - TENANT_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX        #REQUIRED
+      - CERTIFICATE_PWD=XXXXXXXX                              #REQUIRED
+      - APPLICATION_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX   #REQUIRED
+      - SUBSCRIPTION_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX  #REQUIRED
+      - NSG_NAME=XXXX                                         #FILL FOR A SINGLE RULE, ELSE DELETE                                         
+      - RULE_NAME=XXXX                                        #FILL FOR A SINGLE RULE, ELSE DELETE
+      - TZ=XXXXXXXXXXXX                                       #OPTIONAL
     volumes:
-      - ${PWD}/scripts/:/app
+      - path_to_rules.txt:/app                                #FILL FOR MULTIPLE NSGS/RULES, ELSE DELETE
     restart: unless-stopped
 
 
